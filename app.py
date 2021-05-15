@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-st.title("Video Game Sales Analysis")
+st.title("Twitter Sentiment Analysis")
 st.image('title_image.jpg')
 st.header("A Not very long description...")
 st.markdown("---")
@@ -18,10 +18,12 @@ def viewDataset():
         df = pd.read_csv('Pokemon.csv')
         st.dataframe(df)
 
+
 def getTwitterInput():
     with st.spinner("Loading View... "):
         user_input = st.text_input("Enter Twitter Handle or a hashtag")
         btn = st.button("Search Tweets")
+
 
 def saveImage():
     img_name = st.text_input("Enter name of Image")
